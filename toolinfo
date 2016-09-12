@@ -20,4 +20,5 @@ github : john.....com  ---http://www.linuxidc.com/Linux/2014-03/97821.htm
     git commit -m ""
     git push origin master
 
-
+    从远程同步代码到本地
+    git pull
