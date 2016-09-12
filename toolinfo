@@ -15,6 +15,9 @@ github : john.....com  ---http://www.linuxidc.com/Linux/2014-03/97821.htm
     git commit -m "xxx"  提交到本地仓库，并附上说明
     git push origin master
 
-
+    提交更改
+    git add .   自动查看哪些需要提交
+    git commit -m ""
+    git push origin master
 
 
