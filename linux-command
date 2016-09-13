@@ -3,3 +3,13 @@ evince xxx.pdf 终端打开pdf文件
 解压：
     tar.bz2 : tar -jxvf xx.tar.bz2
 
+mysql
+    mysqldump -u root -p111111 dbname table1 table2 > xx.sql  数据库备份
+    mysqldump -u root -p111111 --databases db1 db2 > xx.sql  备份多个数据库
+    mysqldump -u root -p111111 -all-databases > xx.sql
+
+    mysqlhostcopy
+
+    mysql -u root -pxxx dbname < xx.sql  还原
+
+
