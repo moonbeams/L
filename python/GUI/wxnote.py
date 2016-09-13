@@ -245,8 +245,14 @@ class App_8(wx.App):
     wx.CommandEvent: wx.EVT_BUTTON wx.EVT_MENU....
 
     Bind(event,handler,source=None,id=wx.ID_ANY,id2=wx.ID_ANY)
+    AddPendingEvent(event)：将这个event参数放入事件处理系统中。类似于ProcessEvent(),但它实际上不
+        会立即触发事件的处理。相反,该事件被增加到事件队列中。适用于线程间的基于事件的通信。
+    GetEvtHandlerEnabled() 
+    SetEvtHandlerEnabled(boolean)：如果处理器当前正在处理事件,则属性为True,否则为False。
+    ProcessEvent(event)：把event对象放入事件处理系统中以便立即处理
 
 """
+#menu event
 class Frame_9(wx.Frame):
     def __init__(self,parent,id,title):
         wx.Frame.__init__(self,parent,id,title)
@@ -260,12 +266,38 @@ class Frame_9(wx.Frame):
         self.Close(True)
 class App_9(wx.App):
     def OnInit(self):
-        self.frame = Frame_9(self,None,-1,"menuevt")
+        self.frame = Frame_9(None,-1,"menuevt")
         self.frame.Show()
+        return True
+
+#
+class Frame_10(wx.Frame):
+    def __init__(self,parent,id,title):
+        wx.Frame.__init__(self,parent,id,title,pos=(300,200))
+        self.panel = wx.Panel(self)
+        self.panel.SetEvtHandlerEnabled(False)
+        self.button = wx.Button(self.panel,label="button",pos=(100,20))
+        self.Bind(wx.EVT_BUTTON,self.buttonclick,self.button)
+        self.Bind(wx.EVT_ENTER_WINDOW,self.enterwin)
+        self.Bind(wx.EVT_LEAVE_WINDOW,self.leavewin)
+    def buttonclick(self,event):
+        self.panel.SetBackgroundColour("Green")
+        #self.panel.Refresh()    ???
+    def enterwin(self,event):
+        self.button.SetLabel("enter")
+        #event.Skip()           ???
+    def leavewin(self,event):
+        self.button.SetLabel("leave")
+        #event.Skip()
+class App_10(wx.App):
+    def OnInit(self):
+        self.frame = Frame_10(None,-1,"mouse")
+        self.frame.Show()
+        return True
 
 
 if __name__ == "__main__":
-    app = App_9()
+    app = App_10()
     app.MainLoop()
 
 
