@@ -26,3 +26,36 @@ github : john.....com  ---http://www.linuxidc.com/Linux/2014-03/97821.html
 
     从远程同步代码到本地
     git pull
+
+
+有道词典api
+
+    http://fanyi.youdao.com/openapi?path=data-mode
+    API key：755551255
+    keyfrom：terminal-trans
+    创建时间：2016-08-10
+    网站名称：terminal-trans
+    网站地址：http://blog.sina.com.cn/u/3896218136
+
+    使用API key 时，请求频率限制为每小时1000次，超过限制会被封禁。
+    如果您的应用确实需要超过每小时1000次请求，请参考“常见问题”中的相关信息与我们联系。
+    http://fanyi.youdao.com/openapi.do?keyfrom=terminal-trans&key=755551255&type=data&doctype=xml&version=1.1&q=
+
+
+http://www.runoob.com/regexp/regexp-syntax.html  正则表达式（其他语言）
+
+http://www.cnblogs.com/sevenyuan/archive/2010/12/06/1898075.html   python re
+
+http://fulerbakesi.iteye.com/blog/1589097  python random
+
+http://docs.linuxtone.org/ebooks/C&CPP/c/ch06s05.html      C语言教程
+
+http://blog.sina.com.cn/s/blog_736f1c59010136ry.html    vi全局替换
+
+http://bbs.chinaunix.net/thread-1994983-1-1.html   终端打开网页
+
+http://blog.csdn.net/bravezhe/article/details/7302800    ssh密钥
+
+terminator 
+
+     安装 yum install terminator
