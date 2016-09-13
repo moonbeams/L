@@ -1,0 +1,14 @@
+vi插件：
+
+
+使用python开发vi 插件
+
+    当vim编译时带有+python特性时就能使用python2.x编写插件，+python3则支持python3.x
+    ，可以使用vim --version来查看vim的编译特性。
+
+    要使用python接口，可以用:h python来查看vim提供的帮助文档
+    在vim里可以执行bash命令，只需要:!command即可.
+
+    vim运行python
+    :source support_file/script_demo.vim
+    :call Foo()
