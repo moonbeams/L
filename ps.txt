@@ -1,10 +1,10 @@
 Hi, I come from China, growing at a small city Lu¡¯an, Anhui, beginning my college life at Qingdao, Shandong when I was 17 years old, and now, I am working as a python programmer in Beijing Fronware Software Company which focus on virtualization.
 
-I have graduated one year and a few mouths, sometimes I would look back on my college life. Although it is not the legendary life in my imaginary, I do learned a lot of things. Besides the classes that I have to take, during the first two years of my college life, I entered Electronic and Communication lab to learn programming and SCM, work on some projects with my partners and compete with students from all over the province in Undergraduate Electronics Design Contest. Then I started learning English for Toefl and GRE test. I also learned jazz drum and guitar when I was in college. These things helped with my life until now and I believe, will be the same in the future.
-
  My job is the development of server virtualization. We use vCenter/vServer model to manage servers. With the support of KVM module under CenterOS 7.2 (this year we updated our system from 6.5 to 7.2),we can simplely create virtual machine contains various OS.What's more, we add Network virtualization like VLAN and storage virtualization like SAN and many other linux service like Corosync, OVS, LVM2, MariaDB and so on to make sure our server system more stable and more powerful.
  
- Python是完成这个产品最重要的部分，除了实现所有的功能性操作，还负责与java所写的网页代码以及C++所写的虚拟机内部状态代码进行通信。加上python开发部的人数并不多，所以我所需要做的工作非常多，除了正常的开发，还需要和三四名测试人员交流对产品进行修复改进。到目前为止，
+ Python是完成这个产品最重要的部分，除了实现所有的功能性操作，还负责与java所写的网页代码以及C++所写的虚拟机内部状态代码进行通信。加上python开发部的人数并不多，所以我所需要做的工作非常多，除了正常的开发，还需要和三四名测试人员交流对产品进行修复改进。到目前为止，我已经参与了Linux kernel的升级、南京部门vClass的通信模块整改（zmq 到 rabbitmq）。现在正在进行使用MariaDB Cluster将vServer/vCenter升级为分布式系统，基本上需要把之前的产品代码重写或者逻辑修改，这个项目已经持续了三个月，
+ 
+ I have graduated one year and a few mouths, sometimes I would look back on my college life. Although it is not the legendary life in my imaginary, I do learned a lot of things. Besides the classes that I have to take, during the first two years of my college life, I entered Electronic and Communication lab to learn programming and SCM, work on some projects with my partners and compete with students from all over the province in Undergraduate Electronics Design Contest. Then I started learning English for Toefl and GRE test. I also learned jazz drum and guitar when I was in college. These things helped with my life until now and I believe, will be the same in the future.
  
 
  
