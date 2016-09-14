@@ -1,4 +1,4 @@
-github教程 
+github教程   5
 有道词典api  32
 Terminator   47
 
@@ -32,6 +32,8 @@ github : john.....com  ---http://www.linuxidc.com/Linux/2014-03/97821.html
 
 有道词典api
 
+    开发实例：python/project/term_trans.py  linux终端上运行的翻译程序
+
     http://fanyi.youdao.com/openapi?path=data-mode
     API key：755551255
     keyfrom：terminal-trans
@@ -45,6 +47,8 @@ github : john.....com  ---http://www.linuxidc.com/Linux/2014-03/97821.html
 
 
 terminator 
+    
+    linux模拟终端软件，功能强大，支持分屏
 
      安装 yum install terminator
 
