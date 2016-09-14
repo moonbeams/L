@@ -284,6 +284,7 @@ class Frame_10(wx.Frame):
         self.panel.SetBackgroundColour("Green")
         #self.panel.Refresh()    ???
     def enterwin(self,event):
+        #self.panel.SetEventHandlerEnabled(False)
         self.button.SetLabel("enter")
         #event.Skip()           ???
     def leavewin(self,event):
@@ -295,9 +296,34 @@ class App_10(wx.App):
         self.frame.Show()
         return True
 
+#event.Skip()
+"""
+    button event
+    command event
+"""
+class Frame_11(wx.Frame):
+    def __init__(self,parent,id,title,pos=(300,2000)):
+        wx.Frame.__init__(self,parent,id,title)
+        self.panel = wx.Panel(self)
+        self.button = wx.Button(self.panel,label="button",pos=(100,15))
+        self.Bind(wx.EVT_BUTTON,self.buttonclick)
+
+        self.button.Bind(wx.EVT_LEFT_DOWN,self.mouseleftdown)
+        #使用self.panel则在点击按钮的时候不会触发
+    def buttonclick(self,event):
+        self.panel.SetBackgroundColour("Green")
+    def mouseleftdown(self,event):
+        self.button.SetLabel("down")
+        event.Skip()             #确保两个都能被触发
+class App_11(wx.App):
+    def OnInit(self):
+        self.frame = Frame_11(None,-1,"tt")
+        self.frame.Show()
+        return True
+
 
 if __name__ == "__main__":
-    app = App_10()
+    app = App_11()
     app.MainLoop()
 
 
