@@ -1,4 +1,6 @@
-Hi, I come from China, growing at a small city Lu¡¯an, Anhui, beginning my college life at Qingdao, Shandong when I was 17 years old, and now, I am working as a python programmer in Beijing Fronware Software Company which focus on virtualization.
+
+
+
 
  My job is the development of server virtualization. We use vCenter/vServer model to manage servers. With the support of KVM module under CenterOS 7.2 (this year we updated our system from 6.5 to 7.2),we can simplely create virtual machine contains various OS.What's more, we add Network virtualization like VLAN and storage virtualization like SAN and many other linux service like Corosync, OVS, LVM2, MariaDB and so on to make sure our server system more stable and more powerful.
  
