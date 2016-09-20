@@ -1,8 +1,10 @@
-早早的来到公司，今天依然是继续服务器虚拟化分布式系统的开发，目前已经进行到了第四阶段，连续几个月的开发终于到了收尾的时候。打开电脑，泡了杯咖啡，在脑子里整理一下今天大致的工作内容，接着就开始敲代码了。过了一会，Notes(公司内部聊天软件)窗口就弹到了桌面上，原来是java的同事找我商量开发的事情，
 
+Notes (公司内部聊天软件) 窗口再一次弹了出来，原来是开发java的同事需要确定一些问题。自从入职以来，这种交流从来没有断过。开始的几个月，经常一个人同时处理三四个测试人员提出的问题，而最近半年，随着开发任务的增多，我又要和开发的同事每天交流开发细节。虽然工作任务很繁重，但是我很庆幸这是我毕业后的第一份工作。
 
+我目前在北京方物软件有限公司工作，我的主要职责就是vCenter/vServer产品的维护与开发。产品的主体是使用python语言开发，在CentOS 7.2的基础上，增加了KVM，corosync+pacemaker等，同时加上了存储虚拟化比如SAN和网络虚拟化比如VLAN。用户的操作是通过在java所写的页面上点击，通过zmq发出任务，python接收任务然后处理。用户可以在vCenter的页面配置主机的网络、存储、创建虚拟机及其迁移、备份等等，此外，python还与虚拟机内部的c++代码进行通信，从而监控虚拟机状态。
 
- My job is the development of server virtualization. We use vCenter/vServer model to manage servers. With the support of KVM module under CenterOS 7.2 (this year we updated our system from 6.5 to 7.2),we can simplely create virtual machine contains various OS.What's more, we add Network virtualization like VLAN and storage virtualization like SAN and many other linux service like Corosync, OVS, LVM2, MariaDB and so on to make sure our server system more stable and more powerful.
+我使用的就是python，负责产品主要功能开发。除了有记录的  个bug的修改之外，我还参与了产品系统的升级（从CentOS 6.5到7.2）、南京部门vClass的通信模块整改（zmq to rabbitmq），
+
  
 Python是完成这个产品最重要的部分，除了实现所有的功能性操作，还负责与java所写的网页代码以及C++所写的虚拟机内部状态代码进行。加上python开发部的人数并不多，所以我所需要做的工作非常多，除了正常的开发，还需要和三四名测试人员交流对产品进行修复改进。到目前为止，我已经参与了Linux kernel的升级、南京部门vClass的通信模块整改（zmq to rabbitmq），修复的bug有记录的将近90个。而且从7月份开始，公司产品升级，使用MariaDB Cluster将vServer/vCenter升级为分布式系统，基本上需要把之前的产品代码大部分重写，在这次整改中我除了负责个人的研发外，还需要协调web开发人员对整个产品升级后的逻辑问题进行整改。在这一年多的时间里，不仅仅在编程方面的能力大大提升，我还学习到了很多关于linux的知识，我所接触的不再是像大学里一样一个人花点时间就能完成一个功能性开发，在这里我需要不断的和其他部门的人交流、协调，才能够高效的完成这个庞大的项目。But at the same time，I find I couldn’t feel the passion in my job. Instead I kind of miss my experience in Electronic and Communication lab when I was in my college. Maybe all I have done in the lab is not bigger a small party I have done in my company, But I really feel happy after compiling my code into the machine I build by myself and watching it run as my will, not just coding day and night like now. I miss the life I can communicate with a machine but not just use it as a tool….
  
