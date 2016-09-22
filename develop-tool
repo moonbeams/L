@@ -95,7 +95,8 @@ terminator
      Super+i    Spawn a new Terminator process
      
 
-
+vi：
+set shiftwidth=4 设置缩进，当次有效
 
 
 

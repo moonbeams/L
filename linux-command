@@ -13,3 +13,6 @@ mysql
     mysql -u root -pxxx dbname < xx.sql  还原
 
 
+yumdownloader --downloadonly   don't update, just download
+
+
