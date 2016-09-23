@@ -43,11 +43,11 @@ func_1(){
 #           "$*"  表示 "para1 para2 para3"
 #           "$@"  表示 "para1" "para2" "para3"
 for i in "$*";do
-    echo $i
+    echo $i    #输出1行
 done
 
 for i in "$@";do
-    echo $i
+    echo $i    #输出n行
 done
 
 #for
