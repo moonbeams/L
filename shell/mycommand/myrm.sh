@@ -17,13 +17,13 @@ to_array(){
         array[${index}]=${i}
         ((index++))
     done
-    return array 
+    #echo  "${array[*]}"
 }
 
 case $1 in
 -d)
-    value=to_array $@
-
+    value=$(to_array $@)
+    echo aa
     echo ${value}
     #remvfile $@
     ;;
