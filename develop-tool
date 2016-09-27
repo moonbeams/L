@@ -1,6 +1,7 @@
 github教程   5
 有道词典api  32
 Terminator   47
+vi           99
 
 github : john.....com  ---http://www.linuxidc.com/Linux/2014-03/97821.html
                           http://www.runoob.com/w3cnote/git-guide.html
@@ -96,10 +97,22 @@ terminator
      
 
 vi：
+
 set shiftwidth=4 设置缩进，当次有效
 
+root用户下vi打开文件没有高亮，原因是root默认使用vi，使用vim打开即可，或者alias vi='vim',或者修改配置
 
+    使用python开发vi 插件
 
+        当vim编译时带有+python特性时就能使用python2.x编写插件，+python3则支持python3.x
+        ，可以使用vim --version来查看vim的编译特性。
+
+        要使用python接口，可以用:h python来查看vim提供的帮助文档
+        在vim里可以执行bash命令，只需要:!command即可.
+
+        vim运行python
+        :source support_file/script_demo.vim
+        :call Foo()
 
 
 参考网站：
