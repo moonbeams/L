@@ -18,3 +18,6 @@ yumdownloader --downloadonly   don't update, just download
 
 diff 
     diff -rq xxx xxx   递归比较文件夹，只输出文件名，不输出内容
+
+
+    find -name "*py" |xargs rm -f

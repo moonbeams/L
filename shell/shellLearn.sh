@@ -42,13 +42,68 @@ func_1(){
 #        $*/@ 传递到加本的所有参数
 #           "$*"  表示 "para1 para2 para3"
 #           "$@"  表示 "para1" "para2" "para3"
-for i in "$*";do
-    echo $i    #输出1行
-done
+func_2(){
+    for i in "$*";do
+        echo $i    #输出1行
+    done
+    
+    for i in "$@";do
+        echo $i    #输出n行
+    done
+}
 
-for i in "$@";do
-    echo $i    #输出n行
-done
+#bash运算
+func_3(){
+    val=`expr 2 + 2`   #表达是和运算符之间必须要有空格
+    echo ${val}
+
+    a=10;b=20
+    c=`expr ${a} \* ${b}`      #乘号之前必须要有反斜杠
+    echo ${c}
+}
+
+#双括号运算
+func_4(){
+    a=1;b=2;c=3
+    ((a++))   #((a=a+1))
+    d=$((a*b))
+    echo ${d}
+
+    a=$((a+1,b++,c++))  #类似括号表达式，返回最右边值
+    echo $a
+
+    echo $((a>1?8:9))
+    e='ab'
+    ((b!='a'))&&echo 'err'
+    ((a>2))&&echo "ok"
+}
+
+func_5(){
+    num=5
+    total=0
+    for((i=0;i<=num;i++))
+    do
+        ((total+=i))
+    done
+    echo ${total}
+    
+    i=0
+    total=0
+    while((i<=num))
+    do
+        ((total+=i,i++))
+    done
+    echo ${total}
+    
+    if((total>=15));then
+        echo 'ok'
+    fi    
+}
+#if [ $a == $b ];then      #
+#    echo 'a等于b'
+#elif [ $a != $b ];then
+#    echo 'a不等于b'
+#fi
 
 #for
 func(){

@@ -75,3 +75,6 @@ print time.mktime(time.localtime())
 """
 #struct time(默认当地时间) --> 格式化字符串
 print time.strftime("%Y-%m-%d %H-%M-%S",time.localtime())
+
+#格式化字符串 --> struct time
+print time.strptime("2009-03-20 11:45:39","%Y-%m-%d %H:%M:%S")
