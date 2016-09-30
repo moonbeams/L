@@ -61,8 +61,11 @@ class mysocketserver(mysocket):
         mysocket.__init__(self,host,port)
 
     def server(self):
-        self.s = SocketServer.TCPServer(('',self.port),mytcpHandler_2)
-        self.s.serve_forever()
+        try:
+            self.s = SocketServer.TCPServer(('',self.port),mytcpHandler_2)
+            self.s.serve_forever()
+        except:
+            self.s.server_close()
         
         
         
