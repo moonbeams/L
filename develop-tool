@@ -122,7 +122,7 @@ ssh密钥登陆：  http://blog.csdn.net/bravezhe/article/details/7302800
 
     (1)ssh-keygen 创建公钥和私钥  默认类型rsa
     (2)ssh-add ~/.ssh/id_ras  
-    (3)ssh-copy-id ~/.ssh/id_ras.pub xx@xx.xx.xx.xx    直接远程拷贝到目标主机的~/.ssh目录下并且输入到authorized_keys（cat ~/.ssh/id_xx >> authorixxx）
+    (3)ssh-copy-id -i ~/.ssh/id_ras.pub xx@xx.xx.xx.xx    直接远程拷贝到目标主机的~/.ssh目录下并且输入到authorized_keys（cat ~/.ssh/id_xx >> authorixxx）
     (4)即可无密码验证登陆远端主机
 
 sshpass:
