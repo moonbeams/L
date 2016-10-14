@@ -21,3 +21,31 @@ diff
 
 
     find -name "*py" |xargs rm -f
+
+
+
+
+
+vlan
+vconfig add enoxxxxx id
+vconfig rem enoxxxxx.id
+/proc/net/vlan/enoxxxxx.id
+
+ovs
+ovs-vsctl --may-exist add-br switch0
+ovs-vsctl --if-exists del-br switch0
+ovs-vsctl add-port switch0 enoxxxxx
+ovs-vsctl --if-exists del-port enoxxxxxx
+ovs-vsctl add-bond switch0 bond0 enoxxxx enoxxxx
+
+
+serarch pack
+whereis lspci
+rpm -qf /xxx/xxx/lspci
+
+
+shell script 单引号中变量识别为字符串,双引号中的变量仍为变量
+
+&>  标准输出和标准错误都重定向到....
+
+authconfig --test | grep hashing   察看密码加密方式
