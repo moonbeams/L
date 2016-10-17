@@ -21,6 +21,10 @@ void print_percentage(void){
  调用math.h的函数时，编译需 gcc -lm xxx,因为math.h在libm.so中，增加选项告知搜索路径
  -lc不用加，一般函数在libc.so库中，gcc默认选项
  */
+
+
+/*局部变量可以用任意类型相符的表达式来初始化，而全局变量只能用常量表达式初始化*/
+
 void math_test(void){
     double pi = 3.1416;
     printf("sin(pi/2)=%f",sin(pi/2));
@@ -106,14 +110,40 @@ int factorial_dowhile(int n){
     return result;
 }
 
+/* int i=1 此种定义时i为for的局部变量，且编译需要-std=c99  C语言中不推荐这种写法，兼容性问题 */
 int factorial_for(int n){
-    return ;
+    int result = 1;
+    for(int i=1;i<=n;i++){
+        result *= i;
+    }
+    return result;
 }
 
-/*局部变量可以用任意类型相符的表达式来初始化，而全局变量只能用常量表达式初始化*/
+
+/* 此程序中i，j只能再for中定义，若在之前定义就是这个函数内部的局部变量，在一次for循环结束是不会释放 */
+void print_99(void){
+    int i,j;
+    for(i=1;i<=9;i++){
+        for(j=1;j<=i;j++)
+            printf("%d  ",i*j);
+        printf("\n");    
+    }
+}
+
+
+void print_diamond(int line,char ch){
+    if(0 == line % 2)
+        printf("wrong line number!!");
+        return;
+    int i;
+    for(i=1;i<=(line/2+1);i++);
+            
+}
+
+
 
 int main(void){
-    int result = factorial_dowhile(5);
-    printf("%d",result);
+    /*print_diamond();*/
+    printf("%s","a "*5);
     return 0;
 }
