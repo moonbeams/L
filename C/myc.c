@@ -130,20 +130,52 @@ void print_99(void){
     }
 }
 
-
-void print_diamond(int line,char ch){
-    if(0 == line % 2)
-        printf("wrong line number!!");
-        return;
-    int i;
-    for(i=1;i<=(line/2+1);i++);
-            
+/* 结构体  */
+/* 
+ * 定义在函数外部：struct complex_struct {double x,y;};     //定义tag
+ *                 int main(void){
+ *                     struct complex_struct z;       //定义变量
+ *                 } 
+ * 结构体变量定义时初始化：struct complex_struct z = {3.0,4.0};
+ *
+ *  double x =3.0;
+ *  struct complex_struct z1={x,4.0,} //z1.x=3.0,z1.y=4.0
+ *  struct complex_struct z2={3.0}   //z1.x=3.0,z1.y=0.0
+ *  struct complex_struct z3={}      //z1.x=0.0,z1.y=0.0
+ *  
+ *  结构体赋值：全局变量只能用常量，
+ *              不能使用这种方式：
+ *                  struct complex_struct z1;
+ *                  z1={3.0,4.0};
+ *              结构体之间赋值可以：
+ *                  struct complex_struct z1 = {3.0,4.0};
+ *                  struct complex_struct z2 = z1;
+ *                  z1 = z2;
+ *
+ *  结构体可以作为函数参数以及函数返回值 */
+void struct_test(void){
+    struct complex_struct { double x,y;} z;
+    double x = 3.0;
+    z.x = x;
+    z.y = 4.0;
+    if(z.y<0)
+        printf("z=%.1f%.1fi\n",z.x,z.y);
+    else
+        printf("z=%.1f+%.1fi\n",z.x,z.y);
 }
 
 
+struct complex_struct {double x,y;};           //必须在所有调用的前面定义，否则 :parameter 1 (‘z1’) has incomplete type
+
+struct complex_struct add_complex(struct complex_struct z1,struct complex_struct z2){
+    z1.x = z1.x + z2.x;
+    z1.y = z1.y + z2.y;
+    return z1;    
+}
 
 int main(void){
-    /*print_diamond();*/
-    printf("%s","a "*5);
+    struct complex_struct z = {3.0,4.0};
+    z = add_complex(z,z);
+    printf("z=%.1f+%.1fi",z.x,z.y);
     return 0;
 }
