@@ -23,6 +23,7 @@ diff
     find -name "*py" |xargs rm -f
 
 
+ps -ef |grep 'xterm -into '|grep -v grep |cut -c 9-15 |xargs kill -9
 
 
 
